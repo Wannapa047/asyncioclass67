@@ -1,5 +1,4 @@
 # example of getting the current task from the main coroutine
-# example of getting the current task from the main coroutine
 import asyncio
 
 # define a main coroutine

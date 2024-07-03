@@ -1,5 +1,4 @@
 # example of gather for many coroutines in a list
-# example of gather for many coroutines in a list
 import asyncio
 
 # coroutine used for a task
