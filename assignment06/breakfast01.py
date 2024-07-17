@@ -1,19 +1,34 @@
 import time
 
 class Coffee:
-    pass
+    def __init__(self):
+        self.name = "Coffee"
+    def __str__(self):
+        return self.name
 
 class Egg:
-    pass
+    def __init__(self):
+        self.name = "Egg"
+    def __str__(self):
+        return self.name
 
 class Bacon:
-    pass
+    def __init__(self):
+        self.name = "Bacon"
+    def __str__(self):
+        return self.name
 
 class Toast:
-    pass
+    def __init__(self):
+        self.name = "Toast"
+    def __str__(self):
+        return self.name
 
 class Juice:
-    pass
+    def __init__(self):
+        self.name = "Juice"
+    def __str__(self):
+        return self.name
 
 def PourCoffee():
     print(f"{time.ctime()} – Begin pour coffee...")
@@ -61,13 +76,14 @@ def PourJuice():
     return Juice()
 
 def main():
-    PourCoffee()
-    print(f"{time.ctime()} – >>>>>>>>> Coffee is ready\n")
-    FryEggs(2)
-    FryBacon()
-    ToastBread(2)
+    coffee = PourCoffee()
+    print(f"{time.ctime()} – >>>>>>>>> {coffee} is ready\n")
+    eggs = FryEggs(2)
+    bacon = FryBacon()
+    toast = ToastBread(2)
     print(f"{time.ctime()} – >>>>>>>>> Nearly to finished...\n")
-    PourJuice()
+    juice = PourJuice()
+    print(f"{time.ctime()} – >>>>>>>>> Breakfast is ready: {coffee}, {eggs}, {bacon}, {toast}, {juice}\n")
 
 if __name__ == "__main__":
     start_cooking = time.perf_counter()
