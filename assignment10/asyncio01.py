@@ -1,6 +1,7 @@
 # example of using an asyncio queue
 from random import random
 import asyncio
+import time
 
 # coroutine to generate work
 async def producer(queue):
@@ -43,3 +44,9 @@ async def main():
 # start the asyncio program
 asyncio.run(main())
 
+# start the asyncio program
+if __name__ == "__main__":
+    start_time = time.time()
+    asyncio.run(main())
+    end_time = time.time()
+    print(f"Time taken: {end_time - start_time:.2f} seconds")
